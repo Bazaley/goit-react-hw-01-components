@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
-
+import s from './Profile.module.css';
+console.log(s);
 export const Profile = ({
   user: { username, tag, location, avatar },
   children,
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+    <div className={s.profile}>
+      <div className={s.description}>
+        <img src={avatar} alt="User avatar" className={s.image} />
+        <p className={s.name}>{username}</p>
+        <p className={s.tag}>{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
       {children}
     </div>

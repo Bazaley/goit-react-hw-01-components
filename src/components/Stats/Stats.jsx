@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
+import s from './Stats.module.css';
 
 export const Stats = ({ stats: { followers, views, likes } }) => {
   return (
-    <ul className="stats">
-      <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
+    <ul className={s.stats}>
+      <li className={s.item}>
+        <span className={s.label}>Followers</span>
+        <span className={s.quantity}>{followers}</span>
       </li>
-      <li>
-        <span className="label">Views</span>
-        <span className="quantity">{views}</span>
+      <li className={s.item}>
+        <span className={s.label}>Views</span>
+        <span className={s.quantity}>{views}</span>
       </li>
-      <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
+      <li className={s.item}>
+        <span className={s.label}>Likes</span>
+        <span className={s.quantity}>{likes}</span>
       </li>
     </ul>
   );
